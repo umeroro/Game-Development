@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwde7ps66hiyi"]
+
+[ext_resource type="Texture2D" uid="uid://dghg5355bbi7d" path="res://assets/pixel_laser_yellow.png" id="1_wgdbo"]
+
+[node name="bullet\'" type="Node2D"]
+
+[node name="bulletsprite" type="Sprite2D" parent="."]
+position = Vector2(0, -9.53674e-07)
+scale = Vector2(0.707792, 0.605556)
+texture = ExtResource("1_wgdbo")

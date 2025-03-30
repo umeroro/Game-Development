@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cg2hurc3cbkfh"]
+
+[ext_resource type="Texture2D" uid="uid://ctwgenilrlgpv" path="res://assets/background-purple.png" id="1_70yv6"]
+[ext_resource type="PackedScene" uid="uid://cie8tioyyjyih" path="res://entities/player/player.tscn" id="2_smx3j"]
+[ext_resource type="Texture2D" uid="uid://dn25jf2duipjw" path="res://assets/horizontal_bar_blue.png" id="3_o2178"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_smx3j"]
+size = Vector2(400, 16)
+
+[node name="Game Manager" type="Node2D"]
+
+[node name="BackgroundSprite" type="Sprite2D" parent="."]
+position = Vector2(200, 301.5)
+scale = Vector2(1, 1.4925)
+texture = ExtResource("1_70yv6")
+
+[node name="Player" parent="." instance=ExtResource("2_smx3j")]
+position = Vector2(201, 563)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(200, 496)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_smx3j")
+
+[node name="HorizontalBarBlue" type="Sprite2D" parent="Area2D"]
+position = Vector2(7.62939e-06, 1.06096e-05)
+scale = Vector2(3.07692, 1.6)
+texture = ExtResource("3_o2178")
